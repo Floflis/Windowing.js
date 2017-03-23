@@ -1,0 +1,11 @@
+body {padding:10px}
+
+.draggable-element {
+  width:125px;
+  height:125px;
+  background-color:#666;
+  color:white;
+  padding:10px 12px;
+  cursor:move;
+  position:relative; /* important (all position that's not `static`) */
+}
