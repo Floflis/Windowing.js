@@ -7,5 +7,5 @@ body {padding:10px}
   color:white;
   padding:10px 12px;
   cursor:move;
-  position:relative; /* important (all position that's not `static`) */
+  position:absolute; /* important (all position that's not `static`) */
 }
