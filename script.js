@@ -15,8 +15,8 @@ function _move_elem(e) {
     x_pos = document.all ? window.event.clientX : e.pageX;
     y_pos = document.all ? window.event.clientY : e.pageY;
     if (selected !== null) {
-        selected.style.left = (x_pos) + 'px';
-        selected.style.top = (y_pos) + 'px';
+        selected.parentNode.style.left = (x_pos) + 'px';
+        selected.parentNode.style.top = (y_pos) + 'px';
     }
 }
 

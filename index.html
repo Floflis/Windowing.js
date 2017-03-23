@@ -13,9 +13,10 @@ font-family:Roboto;background:url(https://screensos.github.io/Screens/System/Res
 }
 
 .window > .header {
+    width: 100%;
     height: 30px;
     cursor: move;
-    position: relative;
+    position: absolute;
 }
 
 .window > .header > img {
@@ -62,7 +63,11 @@ font-family:Roboto;background:url(https://screensos.github.io/Screens/System/Res
     color: #fff!important;
 }
 
-@media(max-width:5in){.window iframe{top:0;left:0;width:100%;height:100%;position:fixed}}
+.window iframe {
+    margin-top: 30px;
+}
+
+@media(max-width:5in){.window iframe{margin-top:0px;top:0;left:0;width:100%;height:100%;position:fixed}}
 </style>
 
 </head>
