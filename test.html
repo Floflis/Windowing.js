@@ -1,0 +1,63 @@
+<html><head>
+<script>
+var selected = null, // Object of the element to be moved
+    x_pos = 0, y_pos = 0, // Stores x & y coordinates of the mouse pointer
+    x_elem = 0, y_elem = 0; // Stores top, left values (edge) of the element
+
+// Will be called when user starts dragging an element
+function _drag_init(elem) {
+    // Store the object of the element which needs to be moved
+    selected = elem;
+    x_elem = x_pos ;
+    y_elem = y_pos;
+}
+
+// Will be called when user dragging an element
+function _move_elem(e) {
+    x_pos = document.all ? window.event.clientX : e.pageX;
+    y_pos = document.all ? window.event.clientY : e.pageY;
+    if (selected !== null) {
+        selected.style.left = (x_pos) + 'px';
+        selected.style.top = (y_pos) + 'px';
+    }
+}
+
+// Destroy the object when we are done
+function _destroy() {
+    selected = null;
+}
+
+// Bind the functions...
+var draggables = document.getElementsByClassName('draggable-element');
+for(var i = 0; i < draggables.length; i++){
+  draggables[i].onmousedown = function () {
+      _drag_init(this);
+      return false;
+  };
+}
+
+document.onmousemove = _move_elem;
+document.onmouseup = _destroy;
+</script>
+<style>
+body {padding:10px}
+
+.draggable-element {
+  width:125px;
+  height:125px;
+  background-color:#666;
+  color:white;
+  padding:10px 12px;
+  cursor:move;
+  position:relative; /* important (all position that's not `static`) */
+}
+</style>
+</head>
+<body id="body">
+<div class="draggable-element">Gadget!<div style="width:20px;height:100%;background:#000;position:absolute;top:0;right:-25px"></div></div>
+<div class="draggable-element">Gadget!<div style="width:20px;height:100%;background:#000;position:absolute;top:0;right:-25px"></div></div>
+<div class="draggable-element">Gadget!<div style="width:20px;height:100%;background:#000;position:absolute;top:0;right:-25px"></div></div>
+<div class="draggable-element">Gadget!<div style="width:20px;height:100%;background:#000;position:absolute;top:0;right:-25px"></div></div>
+<div class="draggable-element">Gadget!<div style="width:20px;height:100%;background:#000;position:absolute;top:0;right:-25px"></div></div>
+</body>
+</html>
