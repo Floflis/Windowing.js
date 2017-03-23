@@ -14,6 +14,8 @@ font-family:Roboto;background:url(https://screensos.github.io/Screens/System/Res
 
 .window > .header {
     height: 30px;
+    cursor: move;
+    position: relative;
 }
 
 .window > .header > img {
@@ -30,6 +32,7 @@ font-family:Roboto;background:url(https://screensos.github.io/Screens/System/Res
 
 .window .header .container {
     float: right;
+    cursor: default;
 }
 
 .window .header .button {
@@ -69,7 +72,7 @@ font-family:Roboto;background:url(https://screensos.github.io/Screens/System/Res
     border-bottom: 5px solid #000;
     border-right: 5px solid #000;
     border-left: 5px solid #000;
-"><div class="header" style="
+"><div class="draggable-element header" style="
     background: #000;
     color: #fff;
 "><img src="https://nt1m.github.io/HTML5AudioPlayer/img/favicon.png">
@@ -95,7 +98,7 @@ font-family:Roboto;background:url(https://screensos.github.io/Screens/System/Res
     border-bottom: 5px solid #3f87f6;
     border-right: 5px solid #3f87f6;
     border-left: 5px solid #3f87f6;
-"><div class="header" style="
+"><div class="draggable-element header" style="
     background: #3f87f6;
     color: #fff;
 "><img src="https://screensos.github.io/Screens/System/Apps/com.ws.browser/icon.svg#icon">
@@ -109,13 +112,15 @@ font-family:Roboto;background:url(https://screensos.github.io/Screens/System/Res
 ">□</div><div class="button close" style="
     background: #fff;
     color: #3f87f6;
-">x</div></div></div><iframe width="751px" height="380px" frameborder="0" src="https://screensos.github.io/Screens/System/Apps/com.ws.browser/index.html"></iframe></div><div class="window front" style="
+">x</div></div></div><iframe width="751px" height="380px" frameborder="0" src="https://screensos.github.io/Screens/System/Apps/com.ws.browser/index.html"></iframe></div>
+
+<div class="window front" style="
     top: 12px;
     left: 910px;
     border-bottom: 5px solid #FFD700;
     border-right: 5px solid #FFD700;
     border-left: 5px solid #FFD700;
-"><div class="header" style="
+"><div class="draggable-element header" style="
     background: #FFD700;
     color: #454545;
 "><img src="https://nt1m.github.io/HTML5AudioPlayer/img/favicon.png">
@@ -130,4 +135,6 @@ font-family:Roboto;background:url(https://screensos.github.io/Screens/System/Res
     background: #454545;
     color: #FFD700;
 ">x</div></div></div><iframe width="351px" height="380px" frameborder="0" src="https://screensos.github.io/Screens/System/Apps/com.screens.settings/index.html"></iframe></div>
-</body></html>
+</body>
+<script src="script.js"></script>
+</html>
